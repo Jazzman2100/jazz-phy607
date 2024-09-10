@@ -6,7 +6,7 @@ def compute_forces(position, velocity):
     mass = 1000 #kg
     force_gravity = mass*gravity
     force_wind_resistance = velocity**2
-    total_force = -force_wind_resistance + gravity
+    total_force = -force_wind_resistance + force_gravity
     return total_force
 
 def updated_position_velocity(total_force, mass, position, velocity, time_step):
