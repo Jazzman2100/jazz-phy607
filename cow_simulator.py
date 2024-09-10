@@ -17,7 +17,21 @@ def updated_position_x(total_force, init_velocity_x, mass, init_position_x, time
 
 Y = updated_position_x(force_gravity, 0, 1000, 0, 10)
 
-def updated_position_y
+def updated_position_y(total force, init_velocity_y, mass, init_position_y, time_step):
+    acceleration = total_force/mass
+    new_position_y = init_position_y + init_velocity_y*time_step
+    return new_position_y
+
+def updated_velocity_x(init_velocity_x, time_step, total_force, mass):
+    acceleration = total_force/mass
+    new_velocity_x = init_velocity_x + acceleration*time_step
+    return new_velocity_x
+    
+
+def updated_velocity_y(init_velocity_y, time_step, total_force, mass):
+    acceleration = total_force/mass
+    new_velocity_y = init_velocity_y + acceleration*time_step
+    return new_velocity_y
 
 
 def energy(gravity, position, velocity, mass):
