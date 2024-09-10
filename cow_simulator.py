@@ -1,17 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def compute_forces():
+def compute_forces(position, velocity):
     gravity = 9.8 #m/s^2
     mass = 1000 #kg
     force_gravity = np.array([0,mass*gravity])
-    position = 
-    velocity =
     force_wind_resistance = velocity**2
     total_force = -force_wind_resistance + gravity
     return total_force
 
-def updated_position_velocity(total_force, mass, position, velocity):
+def updated_position_velocity(total_force, mass, position, velocity, time_step):
     acceleration = total_force/mass
     new_velocity = 
     new_position = 
