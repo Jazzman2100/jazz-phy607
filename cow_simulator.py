@@ -9,11 +9,15 @@ def compute_forces(position, velocity):
     total_force = -force_wind_resistance + force_gravity
     return total_force
 
-def updated_position_velocity(total_force, mass, position, velocity, time_step):
+# no wind resistance for now
+def updated_position_x(total_force, init_velocity_x, mass, init_position_x, time_step):
     acceleration = total_force/mass
-    new_velocity =
-    new_position =
-    return new_position, new_velocity
+    new_position_x = init_position_x + init_velocity_x*time_step
+    return new_position_x
+
+Y = updated_position_x(force_gravity, 0, 1000, 0, 10)
+
+def updated_position_y
 
 
 def energy(gravity, position, velocity, mass):
