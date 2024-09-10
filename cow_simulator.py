@@ -1,21 +1,29 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def compute_forces(position, velocity):
-    gravity = 9.8 #m/s^2
-    mass = 1000 #kg
-    force_gravity = mass*gravity
-    force_wind_resistance = velocity**2
-    total_force = -force_wind_resistance + force_gravity
-    return total_force
+# def compute_forces(position, velocity):
+gravity = 9.8 #m/s^2
+mass = 1000 #kg
+force_gravity = mass*gravity
+force_wind_resistance = velocity**2
+total_force = -force_wind_resistance + force_gravity
+# return total_force
 
 # no wind resistance for now
+# prompt user to input the initial velocity of x
+init_velocity_x = 20 #m/s
+time = [0, 1, 2, 3]
+new_position_x = np.array([])
 def updated_position_x(total_force, init_velocity_x, mass, init_position_x, time_step):
     acceleration = total_force/mass
     new_position_x = init_position_x + init_velocity_x*time_step
     updated_position_x= np.array([force_gravity, 0, 1000, 0, 10])
     return updated_position_x
 
+    new_position_x= init_position_x + init_velocity_x*time_step
+    return new_position_x
+position_x = updated_position_x(0, init_velocity_x, 1000, 0, time)
+print(position_x)
 
 def updated_position_y(total force, init_velocity_y, mass, init_position_y, time_step):
     acceleration = total_force/mass
@@ -26,7 +34,7 @@ def updated_velocity_x(init_velocity_x, time_step, total_force, mass):
     acceleration = total_force/mass
     new_velocity_x = init_velocity_x + acceleration*time_step
     return new_velocity_x
-    
+
 
 def updated_velocity_y(init_velocity_y, time_step, total_force, mass):
     acceleration = total_force/mass
