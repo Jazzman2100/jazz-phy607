@@ -20,10 +20,11 @@ def updated_position_x(total_force, init_velocity_x, mass, init_position_x, time
     updated_position_x= np.array([force_gravity, 0, 1000, 0, 10])
     return updated_position_x
 
+def new_position_x(total_force, init_velocity_x, mass, init_position_x, time_step):
     new_position_x= init_position_x + init_velocity_x*time_step
     return new_position_x
-position_x = updated_position_x(0, init_velocity_x, 1000, 0, time)
-print(position_x)
+    position_x = updated_position_x(0, init_velocity_x, 1000, 0, time)
+    print(position_x)
 
 def updated_position_y(total force, init_velocity_y, mass, init_position_y, time_step):
     acceleration = total_force/mass
