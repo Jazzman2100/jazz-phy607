@@ -7,7 +7,7 @@ def compute_forces():
     force_gravity = np.array([0,mass*gravity])
     position = 
     velocity =
-    force_wind_resistance = 
+    force_wind_resistance = velocity**2
 
 def updated_position_velocity():
 
@@ -21,3 +21,7 @@ def main():
 
 
 def plot():
+    position = np.array(position)
+    velocity = np.array(velocity)
+
+    plt.plot()
