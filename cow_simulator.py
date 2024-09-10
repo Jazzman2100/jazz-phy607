@@ -36,7 +36,7 @@ def updated_velocity_y(init_velocity_y, time_step, total_force, mass):
 
 def energy(gravity, position, velocity, mass):
     height = position[1]
-    potential_energy = mass*g*height
+    potential_energy = mass*gravity*height
     kinetic_energy = 0.5*mass*velocity**2
     total_energy = potential_energy + kinetic_energy
     return potential_energy, kinetic energy, total_energy
