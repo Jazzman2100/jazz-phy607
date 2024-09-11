@@ -114,3 +114,12 @@ def y(t):
 plt.plot(t,y(t))
 plt.grid()
 plt.show()
+
+# Cell 3
+# Energy plot
+KE = 0.5*mo*v(t)**2
+plt.plot(t,KE, color='green')
+plt.xlabel("Time(s)")
+plt.ylabel("Kenitic Energy(J)")
+plt.grid()
+plt.show()
