@@ -98,11 +98,11 @@ def plot():
 # %% Cell 1
 import numpy as np
 import matplotlib.pyplot as plt
-#%% Cell 2
+
 mo = 1000 #kg
-vo = 200 #m/s
+vo = 1700 #m/s
 g = 9.8 #m/s^2
-y0 = 1000 #m
+y0 = 5000 #m
 t = np.arange(0,int(1000/10))
 
 def v(t):
@@ -115,20 +115,17 @@ plt.plot(t,y(t))
 plt.grid()
 plt.show()
 
-# Cell 3
 # Energy plot
 KE = 0.5*mo*v(t)**2
 plt.plot(t,KE, color='green')
 plt.xlabel("Time(s)")
 plt.ylabel("Energy(J)")
-#Cell4
+
 #Potential Energy
 UE = mo*g*y(t)
 plt.plot(t,UE, color='pink')
 
-#Cell 4
 #Total Energy
-
 TE = KE+UE
 plt.plot(t,TE, color = 'blue')
 plt.xlabel("Time(s)")
