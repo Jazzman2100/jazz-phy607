@@ -16,6 +16,9 @@ def y(t):
     return y0 + vo*t - 0.5*g*(t**2)
 
 plt.plot(t,y(t))
+plt.xlable('Time(s)')
+plt.ylable('Distance (m)')
+plt.title('Position of the Spherical Cow as a Function of Time')
 plt.grid()
 
 plt.show()
