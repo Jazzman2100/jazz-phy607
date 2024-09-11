@@ -103,7 +103,7 @@ mo = 1000 #kg
 vo = 1700 #m/s
 g = 9.8 #m/s^2
 y0 = 5000 #m
-t = np.arange(0,int(1000/10))
+t = np.arange(0,int(20000/10))
 
 def v(t):
     return vo - g*t
@@ -112,22 +112,27 @@ def y(t):
     return y0 + vo*t - 0.5*g*(t**2)
 
 plt.plot(t,y(t))
+plt.xlim((0,2000))
+plt.xlabel("Time(s)")
+plt.ylabel("Height(m)")
 plt.grid()
 plt.show()
 
+
+t_energy = np.arange(0,int(800/5))
 # Energy plot
-KE = 0.5*mo*v(t)**2
-plt.plot(t,KE, color='green')
+KE = 0.5*mo*v(t_energy)**2
+plt.plot(t_energy,KE, color='green')
 plt.xlabel("Time(s)")
 plt.ylabel("Energy(J)")
 
 #Potential Energy
-UE = mo*g*y(t)
-plt.plot(t,UE, color='pink')
+UE = mo*g*y(t_energy)
+plt.plot(t_energy,UE, color='pink')
 
 #Total Energy
 TE = KE+UE
-plt.plot(t,TE, color = 'blue')
+plt.plot(t_energy,TE, color = 'blue')
 plt.xlabel("Time(s)")
 plt.ylabel("Energy(J)")
 
