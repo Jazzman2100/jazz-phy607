@@ -77,8 +77,10 @@ def main():
 
         time += time_step
 
-    print(f"Final Position: {position}")
-    print(f"Final Velocity: {velocity}")
+    print(f"Final X- Position: {position_x}")
+    print(f"Final X-Velocity: {velocity_x}")
+    print(f"Final Y-Position: {position_y}")
+    print(f"Final Y-Velocity: {velocity_y}")
     print(f"Final Time: {time}")
 if __name__ == "__main__":
     main()
