@@ -120,6 +120,10 @@ plt.show()
 KE = 0.5*mo*v(t)**2
 plt.plot(t,KE, color='green')
 plt.xlabel("Time(s)")
-plt.ylabel("Kenitic Energy(J)")
+plt.ylabel("Energy(J)")
+#Cell4
+#Potential Energy
+UE = mo*g*y(t)
+plt.plot(t,UE, color='pink')
 plt.grid()
 plt.show()
