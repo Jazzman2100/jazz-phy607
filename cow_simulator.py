@@ -53,6 +53,7 @@ def energy(gravity, position, velocity, mass):
 
 def main():
     init_velocity_x = 20 #m/s
+    init_position_x = 0 #m
     time = [0, 1, 2, 3]
     position = np.array([0.0,1000.0])
     velocity = np.array([10.0,0.0])
