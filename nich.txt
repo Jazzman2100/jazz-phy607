@@ -1,1 +1,17 @@
-test
+solve spherical cow assignment with finite difference approach.
+ie. Xo, Yo, Vxo, Vyo
+f(y) << init_yarray, init_Vy, K, mass, dt, g, final_y >>
+Yo = Yo + Vy*dt
+(append)
+Vy = Vy + g*dt - ((K*Vy^2)/mass)*dt
+(append)
+Fy = -mass*g + K*Vy^2
+(append)
+
+f(x) << init_xarray, init_Vx, K, mass, dt, final_x >>
+Xo = Xo + Vx*dt
+(append)
+Vx = Vx - ((K*Vx^2)/mass)*dt
+(append)
+Fx =  - K*Vx^2
+(append)
