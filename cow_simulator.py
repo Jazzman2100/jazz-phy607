@@ -125,5 +125,14 @@ plt.ylabel("Energy(J)")
 #Potential Energy
 UE = mo*g*y(t)
 plt.plot(t,UE, color='pink')
+
+#Cell 4
+#Total Energy
+
+TE = KE+UE
+plt.plot(t,TE, color = 'blue')
+plt.xlabel("Time(s)")
+plt.ylabel("Energy(J)")
+
 plt.grid()
 plt.show()
