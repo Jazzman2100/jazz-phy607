@@ -1,0 +1,22 @@
+# %% Cell 1
+import numpy as np
+import matplotlib.pyplot as plt
+#%% Cell 2
+mo = 1500
+q = 2.5
+u = 6000
+vo = 0
+g = 9.8
+y0 = 1000 #m
+t = np.arange(0,int(1500/2.5))
+
+def v(t):
+    return vo -g*t
+
+def y(t):
+    return y0 + vo*t - 0.5*g*(t**2)
+
+plt.plot(t,y(t))
+plt.grid()
+
+plt.show()
