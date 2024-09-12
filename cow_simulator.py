@@ -139,3 +139,47 @@ plt.legend(loc="right")
 
 plt.grid()
 plt.show()
+#Cell 2
+import matplotlib.pyplot as plt
+
+def trajectory(xo, yo, Vxo, Vyo, dt, K, m, g):
+    x_pos = [xo]
+    x_vel = [Vxo]
+    y_pos = [yo]
+    y_vel = [Vyo]
+    x = xo
+    Vx = Vxo
+    y = yo
+    Vy = Vyo
+    time = [0]
+    t = 0
+    while y >= 0:
+        x = x + Vx*dt
+        x_pos.append(x)
+        if Vx == 0:
+            Vx = Vx
+        else:
+            Vx = Vx - (dt*(K*Vx**2)/m)*(Vx/abs(Vx))
+        x_vel.append(Vx)
+        y = y + Vy*dt
+        y_pos.append(y)
+        if Vy == 0:
+            Vy = Vy - g*dt
+        else:
+            Vy = Vy - (dt*(K*Vx**2)/m)*(Vy/abs(Vy)) - g*dt
+        y_vel.append(Vy)
+        t = t + dt
+        time.append(t)
+    x_pos
+    y_pos
+    x_vel
+    y_vel
+    time
+    plt.figure(1)
+    plt.plot(x_pos,y_pos)
+    plt.title("Trajectory: K=100")
+    plt.xlabel("Distance")
+    plt.ylabel("Height")
+    plt.show()
+
+trajectory(0, 1000, 25, 25, 0.01, 100, 1000, 9.8)
