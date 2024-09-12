@@ -122,19 +122,20 @@ plt.show()
 t_energy = np.arange(0,int(800/5))
 # Energy plot
 KE = 0.5*mo*v(t_energy)**2
-plt.plot(t_energy,KE, color='green')
+plt.plot(t_energy,KE, color='green', label="Kinetic Energy")
 plt.xlabel("Time(s)")
 plt.ylabel("Energy(J)")
 
 #Potential Energy
 UE = mo*g*y(t_energy)
-plt.plot(t_energy,UE, color='pink')
+plt.plot(t_energy,UE, color='pink', label="Potential Energy")
 
 #Total Energy
 TE = KE+UE
-plt.plot(t_energy,TE, color = 'blue')
+plt.plot(t_energy,TE, color = 'blue', label="Total Energy")
 plt.xlabel("Time(s)")
 plt.ylabel("Energy(J)")
+plt.legend(loc="right")
 
 plt.grid()
 plt.show()
