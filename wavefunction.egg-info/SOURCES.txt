@@ -1,0 +1,9 @@
+README.md
+setup.py
+project2/__init__.py
+project2/wavefunction.py
+wavefunction.egg-info/PKG-INFO
+wavefunction.egg-info/SOURCES.txt
+wavefunction.egg-info/dependency_links.txt
+wavefunction.egg-info/requires.txt
+wavefunction.egg-info/top_level.txt
